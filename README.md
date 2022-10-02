@@ -1,2 +1,4 @@
 # cat-form
-odin project form 
+todo:
+-animate background
+-make form/title/submit section
