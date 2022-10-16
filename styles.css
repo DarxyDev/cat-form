@@ -1,6 +1,12 @@
 :root{
-    --main-bg:lightgray;
+    /* --main-bg:lightgray; */
+    --main-bg:rgba(255,255,255,.85);
     --light-bg:white;
+    --light-text:rgb(50,50,50);
+    --link-text:green;
+    --input-focus:blue;
+    --input-valid:black;
+    --input-invalid:red;
 }
 body{
     position:relative;
@@ -8,13 +14,14 @@ body{
     background-position: -520px -200px;
     background-attachment: fixed;
     font-family:Arial, Helvetica, sans-serif;
+    line-height: 1.2;
 }
 h1{
-    font-size:1.5em;
+    font-size:1.25em;
     font-weight:bold;
 }
 #fullContainer{
-    display:flex;   
+    display:flex;
     height:100vh;
     width:100vw;
 }
@@ -38,19 +45,81 @@ h1{
     flex-direction:column;
     gap:1rem;
     background-color:var(--main-bg);
+    overflow:auto;
 }
 #contentContainer>*{
     padding:1rem;
 }
 #headSection{
-    margin-top:30%;
+    margin-top:15vh;
 }
-#formContainer{
-min-height:15rem;
+#formSection{
 background-color:var(--light-bg);
 box-shadow:0 3px 6px rgba(0,0,0,.1);
-
 }
 #submitSection{
 
+}
+.formContainer{
+    display:flex;
+    gap:4rem;
+    padding:1rem 0;
+}
+.formColumn{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+.inputContainer{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+}
+.inputContainer>label{
+    text-transform:uppercase;
+    font-size:x-small;
+    font-weight:bolder;
+    color:var(--light-text);
+}
+input{
+    border-style:solid;
+    border-radius:4px;
+    outline:none;
+}
+input:invalid{
+    border-color:var(--input-invalid);
+}
+input:focus{
+    outline:none;
+    padding:2px;
+    border-style:outset;
+    border-width:1px;
+    border-radius:4px;
+    border-color:var(--input-focus);
+}
+input:valid{
+    outline:none;
+    padding:2px;
+    border-style:solid;
+    border-width:1px;
+    border-radius:4px;
+    border-color:var(--input-valid);
+}
+.invalidMessage{
+    position:absolute;
+    color:var(--input-invalid);
+    font-size:.5em;
+    bottom:-1.25em;
+}
+#createAccountButton{
+    background-color:var(--link-text);
+    color: var(--light-bg);
+    font-size:1rem;
+    font-weight:bold;
+    width:10rem;
+    height:2.5rem;
+    border-radius:8px;
+    border-color:var(--link-text);
+    border-style:solid;
+    margin-bottom:1rem;
 }

@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catastrophic Inquiries</title>
-    <!-- <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" src="script.js" as="script"> -->
     <link rel="stylesheet" href="cssReset.css">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -22,9 +20,66 @@
             </div>
         </div>
         <div id="contentContainer">
-            <h1 id="headSection">This is a description</h1>
-            <div id="formContainer">This is the form.</div>
-            <div id="submitSection">This is the submit area</div>
+            <h1 id="headSection">This is not a real online service! You
+                know you need something like this in your life to help you
+                realize your deepest dreams.
+                <br>
+                Sign up <em>now</em> to get started.
+                <br><br>
+                You <em>know</em> you want to.
+            </h1>
+            <div id="formSection">
+                <h1>Let's do this!</h1>
+                <form class="formContainer" action="">
+                    <div class="formColumn">
+                        <div class="inputContainer">
+                            <label for="input-first">first name</label>
+                            <input id="input-first" type="text" name="input-first"
+                                pattern="^(?=.{2,15}$)([a-zA-Z]{1,})([\-]{1,1}[a-zA-Z]+)*$" required>
+                        </div>
+                        <div class="inputContainer">
+                            <label for="input-email">email</label>
+                            <input id="input-email" type="email" name="input-email"
+                                pattern="^(([\w]+)([\._+-]{0,1}))+([@]){1,1}([\w.+-])+([.]){1,1}([\w.+-])+$" required>
+                        </div>
+                        <div class="inputContainer hasInvalidMessage">
+                            <label for="input-password">password</label>
+                            <input id="input-password" type="password" name="input-password"
+                                pattern="^(?=.{8,64}$)^(?=[a-zA-Z]+.*[\W]+.*)^(?=.*[0-9]+.*)^(?=.*[A-Z]+.*)^.*$"
+                                required>
+                            <!-- min:8 max:64 first: letter contains:capital,symbol,number  -->
+                            <div class="invalidMessage">* Passwords do not match</div>
+                        </div>
+                    </div>
+                    <div class="formColumn">
+                        <div class="inputContainer">
+                            <label for="input-last">last name</label>
+                            <input id="input-last" type="text" name="input-last"
+                                pattern="^(?=.{2,15}$)([a-zA-Z]{1,})([\-]{1,1}[a-zA-Z]+)*$" required>
+                        </div>
+                        <div class="inputContainer">
+                            <label for="input-phone">phone number</label>
+                            <input id="input-phone" type="tel" name="input-phone"
+                                pattern="^(([\(]{1,1}[0-9]{3,3}[\)]{1,1})|([0-9]{3,3})[-]{0,1})[0-9]{3,3}[-]{0,1}[0-9]{4,4}$"
+                                required>
+                        </div>
+                        <div class="inputContainer">
+                            <label for="input-confirmPass">confirm password</label>
+                            <input id="input-confirmPass" type="password" name="input-confirmPass"
+                                pattern="^(?=.{8,64}$)^(?=[a-zA-Z]+.*[\W]+.*)^(?=.*[0-9]+.*)^(?=.*[A-Z]+.*)^.*$"
+                                required>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div id="submitSection">
+                <button type="submit" id="createAccountButton">Create Account</button>
+                <div>
+                    Already have an account? <a href="">Log in</a>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>
